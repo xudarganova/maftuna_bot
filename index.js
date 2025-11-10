@@ -9,8 +9,17 @@ bot.on("message", async function (msg) {
     const firstname = msg.chat.first_name;
     if(text == "/start") {
         bot.sendMessage(chatId,`assalomu alaykum, ${firstname}`),{
-            
-        }
+        reply_markup: {
+            keyboard : [
+                [{text: "Boshlash🔥"}],
+                [{text: "Menu🥩"}], [{text: "sozlamalar⚙️"}],
+            ],
+            resize_keyboard: true,
+        },
+        };
+    } else if(text == "Boshlash🔥") {
+        const xabar = await
+        bot.sendMessage(chatId, "iltmos kuting...");
     }
     
 })
